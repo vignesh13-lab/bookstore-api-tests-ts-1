@@ -98,72 +98,72 @@ npx playwright show-report
 ## Testing Strategy
   ## Authentication
 
-  -auth.spec.ts: Validates signup and login endpoints.
+  - auth.spec.ts: Validates signup and login endpoints.
 
-  -JWT token generation is verified.
+  - JWT token generation is verified.
 
 ## Books Endpoints
 ## Positive Tests
 
-  -books.create.spec.ts: Create a book and validate response schema.
+  - books.create.spec.ts: Create a book and validate response schema.
 
-  -books.get.spec.ts: Retrieve a book by ID.
+  - books.get.spec.ts: Retrieve a book by ID.
 
-  -books.update.spec.ts: Update book details and validate status.
+  - books.update.spec.ts: Update book details and validate status.
 
-  -books.delete.spec.ts: Delete a book successfully.
+  - books.delete.spec.ts: Delete a book successfully.
 
-  -books.list.spec.ts: List all books and validate array schema.
+  - books.list.spec.ts: List all books and validate array schema.
 
 ## Negative Tests
 
-  books.negative.spec.ts:
+  - books.negative.spec.ts:
 
-  -Unauthorized access (403)
+  - Unauthorized access (403)
 
-  -Invalid payloads (400/422)
+  - Invalid payloads (400/422)
 
-  -Non-existent resources (404)
+  - Non-existent resources (404)
 
 ## Health Check
 
-  -health.spec.ts: Validates /health endpoint returns "up".
+  - health.spec.ts: Validates /health endpoint returns "up".
 
 ## Request Chaining
 
-  -JWT token obtained during login is used for all protected endpoints.
+  - JWT token obtained during login is used for all protected endpoints.
 
-  -Ensures proper sequence of dependent API calls.
+  - Ensures proper sequence of dependent API calls.
 
 ## Schema Validation
 
-  -AJV is used to validate response payloads against predefined JSON schemas.
+  - AJV is used to validate response payloads against predefined JSON schemas.
 
 ## CI/CD Integration
 
   ## GitHub Actions workflow (playwright.yml) automatically runs tests on:
 
-  -Every push or pull request
+  - Every push or pull request
 
-  -Multiple OS environments (Windows, Mac, Linux)
+  - Multiple OS environments (Windows, Mac, Linux)
 
-  -Generates HTML and Allure reports.
+  - Generates HTML and Allure reports.
 
 ## Sample Test Report
 
 ## After running npx playwright test and opening the report:
 
-  -All positive and negative tests pass
+  - All positive and negative tests pass
 
-  -CRUD operations verified with correct status codes
+  - CRUD operations verified with correct status codes
 
-  -Response payloads validated against JSON schemas
+  - Response payloads validated against JSON schemas
 
 ## Notes
 
-  -Experimental warning for JSON imports may appear. Not critical.
+  - Experimental warning for JSON imports may appear. Not critical.
 
-  -All environment-specific data is configurable in env/dev.ts.
+  - All environment-specific data is configurable in env/dev.ts.
 
-  -Framework is modular, maintainable, and scalable for future endpoints.
+  - Framework is modular, maintainable, and scalable for future endpoints.
 
