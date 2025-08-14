@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "id": { "type": "number" },
+    "name": { "type": "string" },
+    "author": { "type": "string" },
+    "published_year": { "type": "number" },
+    "book_summary": { "type": "string" }
+  },
+  "required": ["id", "name", "author", "published_year"]
+}
