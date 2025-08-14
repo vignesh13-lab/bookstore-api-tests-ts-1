@@ -18,7 +18,7 @@ Make sure the following are installed on your machine:
 - FastAPI
 - Git
 
-
+Note: The API project should run locally on http://127.0.0.1:8000
 ---
 ## Features
 - Full CRUD test coverage for `/books` endpoints
