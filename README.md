@@ -6,7 +6,20 @@ It validates all major functionalities of the API, including CRUD operations, au
 The framework is implemented in **TypeScript** using **Playwright** for API testing.
 
 ---
+---
 
+##  Prerequisites
+Make sure the following are installed on your machine:
+
+- Node.js >= 20.x
+- npm >= 9.x
+- Python 3.10+
+- pip
+- FastAPI
+- Git
+
+
+---
 ## Features
 - Full CRUD test coverage for `/books` endpoints
 - Positive and negative test scenarios
