@@ -1,16 +1,14 @@
 import { test, expect } from "@playwright/test";
 import env from "../../env/dev";
-import { signup, login } from "../../src/client/auth";
+import { getAuthToken } from "../../src/utils/authHelper";
 import { createBook, getBook, updateBook, deleteBook } from "../../src/client/books";
 
 test.describe("Books negative scenarios", () => {
   let token: string;
 
   test.beforeAll(async ({ request }) => {
-    // Signup and login to get JWT token
-    await signup(request, env.user.email, env.user.password);
-    token = await login(request, env.user.email, env.user.password);
-  });
+  token = await getAuthToken(request);
+});
 
   test("unauthorized access should return 403", async ({ request }) => {
     const res = await request.get(`${env.baseURL}/books/1`);
